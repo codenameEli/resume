@@ -1,16 +1,17 @@
-<section class="projects">
+<section class="projects container">
+    <h2 class="title color__green"># PROJECTS</h2>
     <div class="project" *ngFor="let project of projects">
-        <div class="header">
+        <div class="header wrapper">
             <h2 class="title">{{ project.title }}</h2>
-            <span class="date">{{ project.date | date: 'MMMM yyyy' }}</span>
+            <h3 class="date">{{ project.date | date: 'MMMM yyyy' }}</h3>
         </div>
         <div class="content">
-            <h4 class="subtitle">Description:</h2>
-            {{ project.content }}
+            <h4 class="subtitle">Description:</h4>
+            <p>{{ project.content }}</p>
         </div>
         <div class="challenge" *ngIf="project.challenge">
-            <h4 class="subtitle">Challenge:</h2>
-            {{ project.challenge }}
+            <h4 class="subtitle">Challenge:</h4>
+            <p>{{ project.challenge }}</p>
         </div>
     </div>
 </section>
